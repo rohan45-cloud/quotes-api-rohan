@@ -1,13 +1,34 @@
-[{
-        "quote": "Believe in yourself.",
-        "author": "Unknown"
-    },
-    {
-        "quote": "Success is a journey, not a destination.",
-        "author": "John Dewey"
-    },
-    {
-        "quote": "Dream big and dare to fail.",
-        "author": "Norman Vaughan"
-    }
+[
+  {
+    "quote": "The best way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney"
+  },
+  {
+    "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "author": "Winston Churchill"
+  },
+  {
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "quote": "Hard work beats talent when talent doesn’t work hard.",
+    "author": "Tim Notke"
+  },
+  {
+    "quote": "Don’t watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson"
+  },
+  {
+    "quote": "Your time is limited, don’t waste it living someone else’s life.",
+    "author": "Steve Jobs"
+  },
+  {
+    "quote": "Everything you can imagine is real.",
+    "author": "Pablo Picasso"
+  },
+  {
+    "quote": "It always seems impossible until it is done.",
+    "author": "Nelson Mandela"
+  }
 ]
