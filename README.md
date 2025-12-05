@@ -1,30 +1,28 @@
-📌 Free Random Quotes API
+Quotes API
 
-A simple and free API that returns random motivational & inspirational quotes in JSON format.
-No API key required — anyone can use it easily.
-
-
----
-
-🔥 Base URL
-
-https://quotes-api-rohan.onrender.com/quote
-
+A simple free API that returns a random quote.
 
 
 ---
 
-📌 Endpoint
+Base URL
 
-GET /quote → Returns a random quote
-
-✔ Example Request
-https://quotes-api-rohan.onrender.com/quote
+https://quotes-api-rohan.onrender.com
 
 
 ---
 
-📥 Example JSON Response
+Endpoint
+
+GET /quotes
+
+Returns a random quote.
+
+URL:
+
+https://quotes-api-rohan.onrender.com/quotes
+
+Example Response:
 
 {
   "quote": "The best way to predict the future is to create it.",
@@ -34,18 +32,17 @@ https://quotes-api-rohan.onrender.com/quote
 
 ---
 
-💻 Code Examples
+Example Usage
 
-✔ JavaScript (Fetch API)
+JavaScript
 
-fetch("https://quotes-api-rohan.onrender.com/quote)
+fetch("https://quotes-api-rohan.onrender.com/quotes")
   .then(res => res.json())
   .then(data => console.log(data));
 
-✔ Python Example
+Python
 
 import requests
 
-res = requests.get("https://quotes-api-rohan.onrender.com")
+res = requests.get("https://quotes-api-rohan.onrender.com/quotes")
 print(res.json())
-
