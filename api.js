@@ -1,19 +1,28 @@
 const express = require("express");
+const app = express();
 const fs = require("fs");
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+// JSON file se quotes read karna
+const quotes = JSON.parse(fs.readFileSync("quotes.json", "utf8"));
 
+// Home route
 app.get("/", (req, res) => {
-  res.send("Quotes API is running...");
+    res.send("Quotes API is running...");
 });
 
-app.get("/quote", (req, res) => {
-  const quotes = JSON.parse(fs.readFileSync("quotes.json", "utf-8"));
-  const random = quotes[Math.floor(Math.random() * quotes.length)];
-  res.json(random);
+// Get all quotes
+app.get("/quotes", (req, res) => {
+    res.json(quotes);
 });
 
-app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+// Get random quote
+app.get("/random", (req, res) => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    res.json(quotes[randomIndex]);
+});
+
+// Render ke liye required PORT
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log("Server running on port " + port);
 });
