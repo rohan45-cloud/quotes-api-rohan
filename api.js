@@ -1,30 +1,19 @@
 const express = require("express");
 const fs = require("fs");
+
 const app = express();
-
-// Root Route
-app.get("/", (req, res) => {
-    res.json({
-        message: "Welcome to Rohan's Free Quotes API",
-        endpoints: {
-            quotes: "/quotes"
-        }
-    });
-});
-
-// Quotes Route
-app.get("/quotes", (req, res) => {
-    const data = fs.readFileSync("quotes.json");
-    const quotes = JSON.parse(data);
-
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-    res.json(randomQuote);
-});
-
-// Start Server
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("Quotes API is running...");
+});
+
+app.get("/quote", (req, res) => {
+  const quotes = JSON.parse(fs.readFileSync("quotes.json", "utf-8"));
+  const random = quotes[Math.floor(Math.random() * quotes.length)];
+  res.json(random);
+});
+
 app.listen(PORT, () => {
-    console.log(API running on port ${PORT});
+  console.log(Server running on port ${PORT});
 });
