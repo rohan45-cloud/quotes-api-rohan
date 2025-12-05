@@ -8,7 +8,7 @@ No API key required — anyone can use it easily.
 
 🔥 Base URL
 
-https://quotes-api-rohan.onrender.com
+https://quotes-api-rohan.onrender.com/quote
 
 
 
@@ -19,7 +19,7 @@ https://quotes-api-rohan.onrender.com
 GET /quote → Returns a random quote
 
 ✔ Example Request
-https://quotes-api-rohan.onrender.com
+https://quotes-api-rohan.onrender.com/quote
 
 
 ---
@@ -38,7 +38,7 @@ https://quotes-api-rohan.onrender.com
 
 ✔ JavaScript (Fetch API)
 
-fetch("https://quotes-api-rohan.onrender.com)
+fetch("https://quotes-api-rohan.onrender.com/quote)
   .then(res => res.json())
   .then(data => console.log(data));
 
@@ -48,3 +48,4 @@ import requests
 
 res = requests.get("https://quotes-api-rohan.onrender.com")
 print(res.json())
+
